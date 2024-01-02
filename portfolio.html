@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vishnu-portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        /* color: aliceblue; */
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 65px;
+        margin-left: 100px;
+        background-color: black;
+        gap: 80%;
+        padding: 0 40px;
+      }
+      p {
+        color: aliceblue;
+        font-size: 25px;
+      }
+      .sidebar {
+        width: 150px;
+        height: 100px;
+        /* background-color: rgba(134, 135, 135, 0.568); */
+        border-radius: 24px;
+        padding: 10px;
+        /* border-right: 1px solid rgba(134, 135, 135, 0.568); */
+        transition: all 2s;
+        /* margin-top: -1000px; */
+        margin-left:1600px;
+      }
+      .show {
+        /* margin-right: 0px; */
+        margin-left: 1250px; 
+      }
+      i {
+        transition: all 2s;
+      }
+      .sidebar{
+        text-align: center;
+      }
+      .nav{
+        background-color: rgb(134, 135, 135);
+      }
+      /* .container-fluid {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 10px;
+        border-radius: 24px;
+        background-color: rgba(255,255,255,0.8) ;
+        
+      } */
+      .cover-section{
+        margin-top: -100px;
+      }
+      .cover-section .container {
+        background-color:black;
+        width: 100%;
+        /* margin: 100px; */
+        text-align: center;
+        padding-top: 200px;
+        padding-bottom: 50px;
+        justify-content: center;
+        /* overflow: hidden; */
+        height: 100vh;
+        /* border: 1px solid white; */
+      }
+      .cover-content  {
+        /* background-color: aqua; */
+        margin: 50px;
+        padding-top: 250px;
+        text-align: center;
+        justify-content: center;
+      }
+      .name{
+        color:  rgb(255, 188, 6) ;
+      }
+      .container h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 70px;
+        color: #323235;
+      }
+      .container p {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #565e63;
+        line-height: 140%;
+      }
+      .description-txt {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: #5e5e63;
+      }
+      .section-2{
+        position: relative;
+      }
+      .section-2 .container p{
+        /* position: absolute; */
+        /* top: 50px ; */
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+        color: azure;
+        font-weight: 500px;
+    
+      }
+      .section-2 .container{
+        background-color:black;
+        height: 120vh;
+        width: 100%;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .project{
+        width: 50%;
+        /* border: 1px solid red; */
+        margin: 10px;
+        padding: 20px;
+        align-items: center;
+      }
+      .project img{
+        width: 100%;
+        height: 300px;
+      }
+      .project-details{
+        padding-top: -10px;
+      }
+      .project-details button{
+        background-color: white;
+        border-radius: 8px;
+        border: none;
+        color: black;
+        height: 50px;
+        padding: 10px;
+        font-family: 'Inter', sans-serif;line-height: 2px;
+      }
+      .casestudy-1{
+        width: 30%;
+        height: 550px;
+        border: 1px solid brown;
+        border-radius: 16px;
+        padding-left: 10px;
+        font-family: 'Inter', sans-serif;
+      }
+      .image{
+        border: 1px solid white;
+        width: 350px;
+        height: 200px;
+        /* object-fit: cover; */
+      }
+      .casestudy-1 img{
+        height: 500px;
+        width: 100%;
+        /* object-fit: cover; */
+      }
+      .section-head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top:50px ;
+        font-family: 'Inter', sans-serif;
+        padding: 5px;
+      }
+      .section-2-title{
+        position: absolute;
+        top: 100px;
+        color: white;
+         font-size: 64px;
+        font-weight: 900;
+        font-family: 'Inter', sans-serif;
+      }
+      .case-stydy-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 100px;
+      }
+      .rect{
+        height: 2px;
+        align-items: center;
+        width: 100px;
+        background-color: white;
+      }
+      .section-3{
+        position: relative;
+        height: 65vh;
+        
+      }
+      .section-3 .container{
+        height: 90vh;
+        background-color: black;
+        width: 100%;
+        padding: 50px;
+      }
+      .section-3 .container h2{
+        position: absolute;
+        top: 100px;
+        font-size: 64px;
+        font-weight: 900;
+        font-family: 'Inter', sans-serif;
+        /* border: 1px solid beige; */
+      }
+      .section-3 .container-section{
+        /* height: 100vh; */
+        width: 100%;
+        position: absolute;
+        top: 200px;
+        /* left:100px; */
+        bottom: 200px;
+        /* padding-bottom: 200px;S */
+      }
+      .section-4{
+        position: relative;
+      }
+      .section-4 .container{
+        height: 100vh;
+        background-color:black;
+        width: 100%;
+        padding: 50px;
+      }
+      .skill{
+        position: absolute;
+        top: 100px;
+        
+      }
+      .tool{
+        display: flex;
+        text-align: center;
+        /* overflow-x: hidden; */
+        width: 750px;
+        gap: 10px;
+        /* border: 1px solid black; */
+        
+      }
+      .tool p{
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 24px;
+        color: white;
+      }
+      .tool p:hover {
+        border: 2px solid rgb(255, 188, 6);
+        transition: all;
+      }
+      .tool-2{
+        display: flex;
+        gap: 10px;
+      }
+      .tool-2 p{
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 24px;
+        color: white;
+      }
+      .tool-2 p:hover {
+        border: 2px solid rgb(255, 188, 6);
+        transition: all;
+      }
+      .w-tool{
+        display: flex;
+        width: 750px;
+        gap: 10px;
+
+      }
+      .w-tool p{
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 24px;
+        color: white;
+        font-family: 'Inter', sans-serif;
+      }
+      .w-tool p:hover {
+        border: 2px solid rgb(255, 188, 6);
+        transition: all;
+      }
+      .D-tool{
+        display: flex;
+        width: 750px;
+        gap: 10px;
+        font-family: 'Inter', sans-serif;
+      }
+      .D-tool p{
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 24px;
+        color: white;
+      }
+      .D-tool p:hover {
+        border: 2px solid rgb(255, 188, 6);
+        transition: all;
+      }
+      .key-skill,.key-skill-1{
+        display: flex;
+        width: 750px;
+        font-family: 'Inter', sans-serif;
+        gap: 10px; 
+      }
+      .key-skill p,.key-skill-1 p{
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 24px;
+        color: white;
+        font-family: 'Inter', sans-serif;
+      }
+      .key-skill p:hover,.key-skill-1 p:hover{
+        border: 2px solid rgb(255, 188, 6);
+        transition: all;
+      }
+      .section-5{
+        position: relative;
+      }
+      .section-5 .container{
+        height: 100vh;
+        background-color:black;
+        width: 100%;
+        padding: 50px;
+
+      }
+      .section-5 .container .row{
+        position: absolute;
+        top: 100px;
+        background-color: black;
+      }
+      .footer .row{
+        display: flex;
+        /* position: relative; */
+      }
+      .social{
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        position: absolute;
+        top: 450px;
+        left: 900px;
+        color: white;
+      }
+      .footer-button{
+        position: absolute;
+        left: 1100px;
+        align-items: end;
+        color: white;
+      }
+      .copywrite{
+        font-size: 4px;
+        position: absolute;
+        top: 680px;
+        left: 750px; 
+        color: white;
+      }
+      
+    </style>
+  </head>
+  <body style="background-color:black;">
+    <nav>
+      <p>Vishnu UIUX</p>
+      <i
+        id="x-ic"
+        class="fa-solid fa-bars"
+        style="color: aliceblue"
+        onclick="sidebartoggle()"
+      ></i>
+    </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="portfolio-about.html"><p>About</p></a>
+      <a href="Resume.pdf" download><p>Resume</p></a>
+      <!-- <a href=""><p>Resume</p></a> -->
+    </div>
+
+
+    <!-- <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="font-weight: 700;">VishnuUIUX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+          onclick="sidebartoogle()"
+        >
+          <span class="navbar-toggler-icon" >
+          </span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+    <div class="cover-section" id="cover-section">
+        <div class="container">
+            <h1 style="color: white;">Hi,i'm <span class="name">vishnu</span></h1>
+        <h5 style="color: rgb(127, 122, 122);font-family: 'Inter', sans-serif;">UI/UX DESIGNER</h5>
+        <p style="color: white;"><i class="fa-regular fa-location-dot"></i> Malappuram</p>
+        <p class="description-txt" style="color: white;">
+          I’m a naturally curious designer with an appetite for No-Code tools, 
+          <p style="color: white;"> motion design, and tasty food. Learn more <span ><a href="portfolio-about.html">about me</a></span></p>
+        </p>
+        </div>
+    </div>
+    <section class="section-2">
+        <div class="container" style="align-items: center;">
+
+            <div class="section-head">
+                <div class="rect"></div>
+                <p>Selected Works</p>
+                
+            </div>
+            <h2 class="section-2-title">Real results for every client.
+              Every time.</h2>
+              <div class="case-stydy-section" style="  width: 100%; height: 100vh;">
+                <div class="project">
+                  <img src="practo.png" alt="">
+                  <div class="project-details">
+                    <p>Practo App RE-Design</p>
+                    <p>UI Design | 2022</p>
+                    <!-- <p>2022</p> -->
+                    <button>Read Case Study</button>
+                  </div>
+                </div>
+                <div class="project">
+                  <img src="Frame 158.png" alt="">
+                  <div class="project-details">
+                    <p>Wether App UI design</p>
+                    <p>UI Design | 2023</p>
+                    <!-- <p>2023</p> -->
+                    <button>Read Case Study</button>
+                  </div>
+                  
+                </div>
+                <!-- <div class="casestudy-1">
+                  <div class="image">
+                    <img src="Frame 154.png" alt="">
+                    <img src="practo.png" class="img-fluid" alt="">
+                  </div>
+                  
+                  <h2>title</h2>
+                  <p>UI/UX . 2023</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates pariatur ut fugiat, beatae molestiae vitae reiciendis eum rem ratione asperiores sint eos numquam magnam nobis quis, quod perspiciatis repellat voluptate.</p>
+                  <button>Read casestudy</button>
+                </div>
+                <div class="casestudy-1">
+                  <img src="Frame 155.png" class="img-fluid">
+                  <h2>title</h2>
+                  <p>UI/UX . 2023</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates pariatur ut fugiat, beatae molestiae vitae reiciendis eum rem ratione asperiores sint eos numquam magnam nobis quis, quod perspiciatis repellat voluptate.</p>
+                  <button>Read casestudy</button>
+                </div>
+                <div class="casestudy-1">
+                  <img src="Frame 156.png" alt="">
+                  <h2>title</h2>
+                  <p>UI/UX . 2023</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates pariatur ut fugiat, beatae molestiae vitae reiciendis eum rem ratione asperiores sint eos numquam magnam nobis quis, quod perspiciatis repellat voluptate.</p>
+                  <button>Read casestudy</button>
+                </div> -->
+              </div>
+            
+            
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="container" style="align-items: center;">
+            <div class="section-head">
+                <div class="rect"></div>
+                <p style="color: white; font-family: 'Inter', sans-serif;">Design Expertise</p>
+                
+            </div>
+            <h2 style="color: white; ">Push the Boundaries of Design</h2>
+        </div>
+        <div class="container-section">
+          <div class="container" style="align-items: center; ">
+            <div class="row" style="margin-left: 50px; align-items: center;">
+              <div class="col-4" >
+                <p style="text-align: center; border: 1px solid white; height: 150px; width: 250px; padding-top: 60px; color: white;font-family: 'Inter', sans-serif;">User Experience & User Interface</p>
+              </div>
+              <div class="col-4">
+                <p  style="text-align: center; border: 1px solid white; height: 150px; width: 250px; padding-top: 65px;  color: white;font-family: 'Inter', sans-serif;">Brand & System</p>
+              </div>
+              <div class="col-4">
+                <p style="text-align: center; border: 1px solid white; height: 150px; width: 250px; padding-top: 60px;  color: white;font-family: 'Inter', sans-serif;">Wireframe & Prototype</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </section>
+    <section class="section-4 ">
+        <div class="container" style="align-items: center;">
+            <div class="section-head">
+                <div class="rect"></div>
+                <p style="color:white;font-family: 'Inter', sans-serif;">Tools & Software</p>
+            </div>
+            <div class="skill">
+              <div class="cotainer"style="align-items: center;">
+                <div class="row">
+                  <div class="col-5">
+                    <h1 style="color: white;font-family: 'Inter', sans-serif;">
+                      Software
+                      & Skills</h1>
+                  </div>
+                  <div class="col-7">
+                    <h1 style="font-size: 40px; color: white;font-family: 'Inter', sans-serif;">DESIGN & PORTFOLIOS</h1>
+                    <div class="tool">
+                      <P style="font-family: 'Inter', sans-serif;">Figma</P>
+                      <P style="font-family: 'Inter', sans-serif;">Illustrator</P>
+                      <P style="font-family: 'Inter', sans-serif;">Framer</P>
+                      <P  style="font-family: 'Inter', sans-serif;">Sketch</P>
+                    </div>
+
+                    <div class="tool-2">
+                      <P style="font-family: 'Inter', sans-serif;">Photoshop</P>
+                      <P style="font-family: 'Inter', sans-serif;">Indesign</P>
+                      <P style="font-family: 'Inter', sans-serif;">Affter efects</P>
+                      <hr>
+                    </div>
+                    <h1 style="font-size: 40px;color: white;font-family: 'Inter', sans-serif;">WIREFRAMES & USER FLOW</h1>
+                    <div class="w-tool">
+                      <p style="font-family: 'Inter', sans-serif;">Figjam</p>
+                      <p style="font-family: 'Inter', sans-serif;">Adobe XD</p>
+                      <p style="font-family: 'Inter', sans-serif;">Invision</p>
+                      <p style="font-family: 'Inter', sans-serif;">Miro</p>
+                    </div>
+                    <h1 style="font-size: 40px;color: white;font-family: 'Inter', sans-serif;">DEVELOPMENT</h1>
+                    <div class="D-tool">
+                      <p style="font-family: 'Inter', sans-serif;">HTML</p>
+                      <p style="font-family: 'Inter', sans-serif;">CSS</p>
+                      <p style="font-family: 'Inter', sans-serif;">JavaScript</p>
+                      <p style="font-family: 'Inter', sans-serif;">Bootstrap</p>
+                    </div>
+                    <h1 style="font-size: 40px;color: white;font-family: 'Inter', sans-serif;">KEY SKILLS</h1>
+                    <div class="key-skill">
+                    <p style="font-family: 'Inter', sans-serif;">Concepet development</p>
+                    <p style="font-family: 'Inter', sans-serif;">UI/UX</p>
+                    <p style="font-family: 'Inter', sans-serif;">Intractive Design</p>
+                    <!-- <p>Critical Thinking</p> -->
+                    <!-- <p>Quantitative Research</p> -->
+                    </div>
+                    <div class="key-skill-1">
+                      <p style="font-family: 'Inter', sans-serif;">Critical Thinking</p>
+                    <p style="font-family: 'Inter', sans-serif;">Quantitative Research</p>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-5">
+        <div class="container" style="align-items: center;">
+            <div class="section-head">
+                <div class="rect"></div>
+                <p>Contact form</p>
+            </div>
+            <div class="row">
+              <div class="col-7">
+                <h1 style="color: white;">Project enquiry</h1>
+            <p style="color: white;">If you have a general enquiry, please drop me an email.please kindly fill out this short form.</p>
+            <br><br><br><br><br><br><br>
+            <p style="color: white;">E-mail</p>
+            <p style="color: white;"><a href="mailto:contact@example.com" style="text-decoration: none;">yourname@gmail.com</p></a>
+              </div>
+              <div class="col-5">
+                <p class="footer-button"style="color: white;"><a href="#cover-section"><i class="fa-thin fa-circle-arrow-up"></i>logo</p></a>
+                <div class="social"> 
+                  <br><br><br><br><br><br><br>
+                  <p style="color: white;"><a href="https://www.behance.net/vishnu-narayan" style="text-decoration: none;">Behance</p></a>
+                <p style="color: white;"><a href="https://www.linkedin.com/in/vishnu-v-p/" style="text-decoration: none;"> Linkedin</p></a>
+                <!-- <p style="color: white;">Instagram</p> -->
+                <p style="color: white;" > <a href="https://github.com/vpvishnu0498" style="text-decoration: none;">github</p></a>
+                </div>
+                
+              </div>
+              
+            </div>
+            <p class="copywrite" style="text-align: center; font-size: 10px; color: white;">copyright© 
+              2023</p>
+            <!-- <div class="footer row">
+              <div class="mail">
+                <p>E-mail</p>
+                <p>yourname@gmail.com</p>
+              </div> -->
+              <!-- <div class="social">
+                <p>Behance</p>
+                <p>Linkedin</p>
+                <p>Instagram</p>
+                <p>github</p>
+              </div>
+            </div> -->
+            <!-- <div class="footer row">
+              <div class="mail">
+                <p>E-mail</p>
+                <p>yourname@gmail.com</p>
+              </div>
+              <div class="social">
+                <p>Behance</p>
+                <p>Linkedin</p>
+                <p>Instagram</p>
+                <p>github</p>
+              </div>
+            </div> -->
+        </div>
+    </section>  
+    <script>
+      function sidebartoggle() {
+        document.getElementById("sidebar").classList.toggle("show");
+        document.getElementById("x-ic").classList.toggle("fa-xmark");
+      }
+    </script>  
+  </body>
+</html>

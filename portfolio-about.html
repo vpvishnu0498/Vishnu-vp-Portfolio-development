@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vishnu-portfolio-about</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        /* color: aliceblue; */
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 65px;
+        /* margin-left: 100px; */
+        background-color: black;
+        gap: 80%;
+        padding: 10px 40px;
+      }
+      p {
+        color: aliceblue;
+        font-size: 25px;
+      }
+      .sidebar {
+        width: 150px;
+        height: 100px;
+        /* background-color: rgba(134, 135, 135, 0.568); */
+        border-radius: 24px;
+        padding: 10px;
+        /* border-right: 1px solid rgba(134, 135, 135, 0.568); */
+        transition: all 2s;
+        /* margin-top: -1000px; */
+        margin-left: 1600px;
+      }
+      .show {
+        /* margin-right: 0px; */
+        margin-left: 1250px;
+      }
+      i {
+        transition: all 2s;
+      }
+      .sidebar {
+        text-align: center;
+      }
+      .nav {
+        background-color: rgb(134, 135, 135);
+      }
+      .cover-section {
+        margin-top: -100px;
+        
+      }
+      .cover-section .container {
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        padding-top: 200px;
+        padding-bottom: -10px;
+        justify-content: center;
+        height: 80vh;
+        /* border: 1px solid white; */
+        background-image: url(Rectangle\ 52.png);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        /* position: relative; */
+      }
+      .cover-title{
+        /* width: %; */
+        width: auto;
+        text-align: right;
+        padding-left: 600px;
+        padding-right: 150px;
+        /* border: 1px solid red; */
+        font-size: 48px;
+        font-weight: 800;
+      }
+      .cover-des{
+        width: auto;
+        text-align: right;
+        padding-left: 600px;
+        padding-right: 150px;
+        /* border: 1px solid red; */
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .cover-section .container h1,p{
+        width: ;
+      }
+      .cover-section .container img {
+        height: 300px;
+        width: 200;
+        background-color: aliceblue;
+        /* border: 1px solid red; */
+        position: relative;
+      }
+      .img-2 {
+        position: absolute;
+
+        height: 1000px;
+        width: 200;
+      }
+      .section-2 .container {
+        background-color: black;
+        width: 100%;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: -10px;
+        padding-left: 200px;
+        padding-right: 200px;
+        justify-content: center;
+        height: 50vh;
+        border: 1px solid white;
+      }
+      .content h1 p {
+        width: 750px;
+        text-align: justify;
+      }
+      .content h1 {
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(
+          141deg,
+          #adf1e0,
+          #8075ff 28%,
+          #ff7171 98%
+        );
+        font-size: 36px;
+        font-weight: 600;
+        font-family: "Inter", sans-serif;
+      }
+      .content p {
+        font-size: 16px;
+        font-family: "Inter", sans-serif;
+      }
+      /* .section-3 .container{
+        background-color: black;
+        width: 100%;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: -10px;
+        padding-left: 200px;
+        padding-right: 200px;
+        justify-content: center;
+        height: 100vh;
+        border: 1px solid white;
+      } */
+    </style>
+  </head>
+  <body style="background-color: black">
+    <nav>
+      <p>Vishnu UIUX</p>
+      <i
+        id="x-ic"
+        class="fa-solid fa-bars"
+        style="color: aliceblue"
+        onclick="sidebartoggle()"
+      ></i>
+    </nav>
+    <div class="sidebar" id="sidebar">
+      <a href="portfolio.html"><p>Home</p></a>
+      <a href="Resume.pdf" download><p>Resume</p></a>
+      </div></a>
+    <div class="cover-section">
+      <div class="container">
+        <h1 class="cover-title">HEY, I'M
+          VISHNU
+          UI/UX DESIGNER
+          PRODUCT DESIGNER</h1>
+        <p class="cover-des">My expertise is crafting intuitiveexperiences & scalable design systemsthat are as beautiful as they arefunctional.
+        </p>
+        <!-- <img src="stev.jpg" alt="" />
+        <img class="img-2" src="stev.jpg" alt="" />
+        <img src="stev.jpg" alt="" /> -->
+      </div>
+    </div>
+    <div class="section-2">
+      <div class="container">
+        <div class="content">
+          <h1>Hi Again,I'am Vishnu</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit odio provident, voluptas expedita alias pariatur, sit
+            repellat modi, quia nemo voluptatum nam quas ipsum esse in sed
+            placeat fuga impedit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit odio provident, voluptas expedita alias pariatur, sit
+            repellat modi, quia nemo voluptatum nam quas ipsum esse in sed
+            placeat fuga impedit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit odio provident, voluptas expedita alias pariatur, sit
+            repellat modi, quia nemo voluptatum nam quas ipsum esse in sed
+            placeat fuga impedit.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit odio provident, voluptas expedita alias pariatur, sit
+            repellat modi, quia nemo voluptatum nam quas ipsum esse in sed
+            placeat fuga impedit.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function sidebartoggle() {
+        document.getElementById("sidebar").classList.toggle("show");
+        document.getElementById("x-ic").classList.toggle("fa-xmark");
+      }
+    </script>
+  </body>
+</html>
